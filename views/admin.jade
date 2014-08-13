@@ -1,0 +1,25 @@
+extends layout
+
+block content
+	h1 Build your portfolio page
+
+		h2 First let's build your profile
+		form(method='post', action='/file-upload')
+			input(type="text", name='name' placeholder="Enter your name")
+			input(type="text", name='job' placeholder='What is your job/hobby?')
+			input(type="textarea", name='byline' placeholder='What sets you apart?')
+			h3 Upload your your hero image. This is the first image the user will see when they come to your page. 
+			input(type="file", name='hero' placeholder="Enter your hero image")
+			input(type='submit')
+
+		//- h2 Upload your work to your profile page
+		//- form(method='post', action='/formSubmit')
+		//- 	h3 Upload pictures to your profile
+		//- 	input(type="file", name='pic' placeholder="Upload pictures to profile")
+		//- 	h3 Upload websites you have worked on and include a picture of the site
+		//- 	input(type="url", name='destination' placeholder="upload links to your website")
+		//- 	input(type="file", name='website-pic' placeholder="Upload a picture of your website")
+		//- 	input(type='submit')
+
+		
+	
