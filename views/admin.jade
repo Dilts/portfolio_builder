@@ -4,7 +4,7 @@ block content
 	h1 Build your portfolio page
 
 		h2 First let's build your profile
-		form(method='post', action='/file-upload')
+		form(action='/file-upload', method='post', enctype="multipart/form-data", role="form")
 			input(type="text", name='name' placeholder="Enter your name")
 			input(type="text", name='job' placeholder='What is your job/hobby?')
 			input(type="textarea", name='byline' placeholder='What sets you apart?')
