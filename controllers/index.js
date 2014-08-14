@@ -1,4 +1,4 @@
-var portfolioModel = require('../models/user.js')
+var portfolioModel = require('../models/artist.js')
 
 var indexController = {
 	index: function(req, res) {
