@@ -1,3 +1,4 @@
+
 var portfolioModel = require('../models/artist.js')
 
 var indexController = {
@@ -9,7 +10,8 @@ var indexController = {
 	    	}
 	    	else {
 	    		res.render('index', {
-	    			profile: portfolio
+	    			profile: portfolio,
+	    			user: req.user
 	    		});
 	    	}
 		})
@@ -35,12 +37,25 @@ var indexController = {
     		res.send(500, 'did not save')
     	}
     	else {
-    		res.redirect('/')
+    		req.login(doc, function(err){
+    			res.redirect('/admin/' + doc_id);
+    		})
+    		
     	} 
 
     })
 	},
 
+	pokemon: function(req, res){
+		console.log(req.params)
+		var findOneAdmin = portfolioModel.findOne({_id: req.params.id}, function(err, doc) {
+			console.log('this is a', doc)
+		res.render('admin', {
+			user: req.user
+		})
+
+		})
+	}
 };
 
 module.exports = indexController;

@@ -22,7 +22,7 @@ var performLogin = function(req, res, next, user){
     if(err) return next(err);
 
     // Otherwise, send the user to the homepage.
-    return res.redirect('/');
+    return res.redirect('/admin/' + user._id);
   });
 };
 
@@ -56,7 +56,7 @@ var authenticationController = {
     var authFunction = passport.authenticate('local', function(err, user, info){
 
       // If there was an error, allow execution to move to the next middleware
-      if(err) return next(err);
+      if(err) {return next(err)};
 
       // If the user was not successfully logged in due to not being in the
       // database or a password mismatch, set a flash variable to show the error
@@ -136,4 +136,4 @@ var authenticationController = {
 };
 
 // Export our controller methods
-module.exports = authenticationController;
+module.exports = authenticationController; 

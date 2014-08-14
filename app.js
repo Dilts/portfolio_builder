@@ -20,7 +20,7 @@ var cookieParser = require('cookie-parser');
 var flash = require('connect-flash');
 
 // Load in the base passport library so we can inject its hooks
-// into express middleware.
+// into express middleware.f
 var passport = require('passport');
 
 // Load in our passport configuration that decides how passport
@@ -30,6 +30,8 @@ var passportConfig = require('./config/passport');
 // Pull in our two controllers...
 var indexController = require('./controllers/index');
 var authenticationController = require('./controllers/authentication');
+
+var LocalStrategy = require('passport-local').Strate
 
 // _____________End of passport additions
 
@@ -48,11 +50,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(multer({ dest: './uploads/'}))
 
-app.get('/', indexController.index);
-
-app.get('/admin', indexController.admin);
-
-app.post('/file-upload', indexController.createProfile);
 
 // _____________Added for passport
 
@@ -94,6 +91,16 @@ app.use(passportConfig.ensureAuthenticated);
 app.get('/', indexController.index);
 
 // _____________End of passport additions
+
+
+// app.get('/', indexController.index);
+
+// app.get('/admin', indexController.admin);
+
+app.get('/admin/:id', indexController.pokemon);
+
+app.post('/file-upload', indexController.createProfile);
+
 
 var server = app.listen(6720, function() {
 	console.log('Express server listening on port ' + server.address().port);

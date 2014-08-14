@@ -3,7 +3,8 @@ extends layout
 block content
 	h1 Build your portfolio page
 
-		h2 First let's build your profile
+		h2 Hello, #{user.username}! First let's build your profile
+		p 
 		form(action='/file-upload', method='post', enctype="multipart/form-data", role="form")
 			input(type="text", name='name' placeholder="Enter your name")
 			input(type="text", name='job' placeholder='What is your job/hobby?')
