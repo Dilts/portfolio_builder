@@ -22,7 +22,11 @@ var userSchema = mongoose.Schema({
   password: {
     type: String,
     required: true
-  }
+  }, 
+  name: String,
+  byline: String,
+  job: String,
+  hero: String
 });
 
 /**

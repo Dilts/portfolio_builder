@@ -1,5 +1,5 @@
 
-var portfolioModel = require('../models/artist.js')
+var portfolioModel = require('../models/user.js')
 
 var indexController = {
 	index: function(req, res) {
@@ -25,25 +25,27 @@ var indexController = {
 	createProfile: function(req, res) {
     console.log(req.body);
     console.log('files: ', req.files);
-    var profile = new portfolioModel({
-    	 name: req.body.name, 
-    	 job: req.body.job,
-    	 byline: req.body.byline
-    })
-    console.log(profile)
-    profile.save(function(err, doc) {
+    // var profile = new portfolioModel({
+    // 	 name: req.body.name, 
+    // 	 job: req.body.job,
+    // 	 byline: req.body.byline
+    // })
+    req.user.name = req.body.name
+    req.user.byline = req.body.byline
+    req.user.job = req.body.job
+    req.user.hero = req.files.hero.name
+
+    console.log(req.user)
+    req.user.save(function(err, doc) {
     	if (err) {
     		console.log('error not saving', err)
     		res.send(500, 'did not save')
     	}
-    	else {
-    		req.login(doc, function(err){
-    			res.redirect('/admin/' + doc_id);
-    		})
-    		
-    	} 
 
-    })
+    }) 
+
+    res.render('admin', req)
+
 	},
 
 	pokemon: function(req, res){

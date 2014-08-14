@@ -31,7 +31,7 @@ var passportConfig = require('./config/passport');
 var indexController = require('./controllers/index');
 var authenticationController = require('./controllers/authentication');
 
-var LocalStrategy = require('passport-local').Strate
+var LocalStrategy = require('passport-local').Strategy 
 
 // _____________End of passport additions
 
@@ -48,7 +48,12 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 
 
-app.use(multer({ dest: './uploads/'}))
+app.use(multer({ 
+	dest: './public/uploads/',
+	onFileUploadComplete: function(file){
+		console.log('file saved: ', file)
+	}
+	}))
 
 
 // _____________Added for passport

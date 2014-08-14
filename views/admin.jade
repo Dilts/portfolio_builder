@@ -2,9 +2,12 @@ extends layout
 
 block content
 	h1 Build your portfolio page
+	if !user.job
+		h2 
+			| Hello, #{user.username}! First let's post your background image
+			| And start to build your profile with your name and occupation 
+	
 
-		h2 Hello, #{user.username}! First let's build your profile
-		p 
 		form(action='/file-upload', method='post', enctype="multipart/form-data", role="form")
 			input(type="text", name='name' placeholder="Enter your name")
 			input(type="text", name='job' placeholder='What is your job/hobby?')
@@ -13,7 +16,8 @@ block content
 			input(type="file", name='hero' placeholder="Enter your hero image")
 			input(type='submit')
 
-		//- h2 Upload your work to your profile page
+	else 
+		h2 Upload your work to your profile page
 		//- form(method='post', action='/formSubmit')
 		//- 	h3 Upload pictures to your profile
 		//- 	input(type="file", name='pic' placeholder="Upload pictures to profile")
