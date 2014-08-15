@@ -102,9 +102,13 @@ app.get('/', indexController.index);
 
 // app.get('/admin', indexController.admin);
 
-app.get('/admin/:id', indexController.pokemon);
+app.get('/admin/:id', indexController.dashboard);
+
+app.get('/test/:id', indexController.uniqueProfile);
 
 app.post('/file-upload', indexController.createProfile);
+
+app.post('/portfolio-upload', indexController.addToProfile);
 
 
 var server = app.listen(6720, function() {

@@ -40,12 +40,18 @@ block content
 				.col-md-8
 					.show-content
 						.content-images.hidden.content
+							form(action='/portfolio-upload', method='post', enctype="multipart/form-data", role="form")
+								input(type="file", name='image' placeholder="Upload your image")
+								input(type="text", name='url' placeholder="Enter the URL of your website")
+								input(type="file", name='image' placeholder="Upload your image")
+								input(type="text", name='url' placeholder="Enter the URL of your website")
+								input(type='submit')
 						.content-skills.hidden.content
 						.content-bio.hidden.content
 						.content-theme.hidden.content
 		
-
 	p: a(href="/auth/logout") Log out
+	p: a(href="/test/#{user.id}") View Portfolio page
 
 block scripts
 	script(src='/scripts/hide.js')

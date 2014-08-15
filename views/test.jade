@@ -1,14 +1,10 @@
 extends layout
 
 block content
-	h1 DASHBOARD
-		.container-fluid
-			.row
-				.col-md-4
-					.button-box
-						button.add-images Add Images and Websites 
-						button.add-skills Add Skills and Interests
-						button.add-bio Bio - your about me page
-				.col-md-8
-					.show-content
-						p here is some content
+	h1 Hello #{user.name}
+		.pictures
+			ul
+				for pic in user.portfolio
+					li
+						a(href="#{pic.url}")
+						image(src="/uploads/#{pic.image}")
