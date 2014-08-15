@@ -34,6 +34,7 @@ var indexController = {
     req.user.byline = req.body.byline
     req.user.job = req.body.job
     req.user.hero = req.files.hero.name
+    
 
     console.log(req.user)
     req.user.save(function(err, doc) {

@@ -1,30 +1,54 @@
 extends layout
 
 block content
-	h1 Build your portfolio page
 	if !user.job
-		h2 
-			| Hello, #{user.username}! First let's post your background image
-			| And start to build your profile with your name and occupation 
+		h1 Build your portfolio page
+		h2 Hello, #{user.username}!
+			p
+				| First let's post your background image,
+				| and start to build your profile with your name and occupation 
 	
 
-		form(action='/file-upload', method='post', enctype="multipart/form-data", role="form")
-			input(type="text", name='name' placeholder="Enter your name")
-			input(type="text", name='job' placeholder='What is your job/hobby?')
-			input(type="textarea", name='byline' placeholder='What sets you apart?')
-			h3 Upload your your hero image. This is the first image the user will see when they come to your page. 
-			input(type="file", name='hero' placeholder="Enter your hero image")
-			input(type='submit')
+			form(action='/file-upload', method='post', enctype="multipart/form-data", role="form")
+				input(type="text", name='name' placeholder="Enter your name")
+				input(type="text", name='job' placeholder='What is your job/hobby?')
+				input(type="textarea", name='byline' placeholder='What sets you apart?')
+				h3 Upload your your hero image. This is the first image the user will see when they come to your page. 
+				input(type="file", name='hero' placeholder="Enter your hero image")
+				input(type='submit')
 
 	else 
-		h2 Upload your work to your profile page
-		//- form(method='post', action='/formSubmit')
+		//- h2 Upload pictures of your work to your profile page
+		//- form(method='post', action='/file-upload', enctype="multipart/form-data", role="form")
 		//- 	h3 Upload pictures to your profile
 		//- 	input(type="file", name='pic' placeholder="Upload pictures to profile")
 		//- 	h3 Upload websites you have worked on and include a picture of the site
 		//- 	input(type="url", name='destination' placeholder="upload links to your website")
 		//- 	input(type="file", name='website-pic' placeholder="Upload a picture of your website")
 		//- 	input(type='submit')
+		h1 DASHBOARD
+		h2 Hello, #{user.username}!
+		.container-fluid
+			.row
+				.col-md-4
+					.button-box
+						button.add-images Add Images and Websites 
+						button.add-skills Add Skills and Interests
+						button.add-bio Bio - your about me page
+						button.add-theme Select your theme
 
+				.col-md-8
+					.show-content
+						.content-images.hidden.content
+						.content-skills.hidden.content
+						.content-bio.hidden.content
+						.content-theme.hidden.content
+		
+
+	p: a(href="/auth/logout") Log out
+
+block scripts
+	script(src='/scripts/hide.js')
+	
 		
 	

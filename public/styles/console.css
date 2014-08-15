@@ -1,0 +1,27 @@
+.hidden {
+	visibility: hidden;
+}
+
+.content-images {
+	height: 150px;
+	width: 100%;
+	background-color: green;
+}
+
+.content-skills{
+	height: 150px;
+	width: 100%;
+	background-color: red;
+}
+
+.content-bio{
+	height: 150px;
+	width: 100%;
+	background-color: blue;
+}
+
+.content-theme{
+	height: 150px;
+	width: 100%;
+	background-color: yellow;
+}
