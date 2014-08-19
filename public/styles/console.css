@@ -24,4 +24,151 @@
 	height: 150px;
 	width: 100%;
 	background-color: yellow;
+
 }
+
+/*_________Register page_______________*/
+.main {
+	height: 120px;
+	width: 100%;
+	background-color: #34495e;
+	color: white;
+	margin-top: -20px;
+}
+
+.top-main{
+	padding-top: 30px;
+}
+
+.bottom-main {
+	padding-top: 130px;
+}
+
+h1 {
+	font-size: 300%;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 30px;
+}
+
+p {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.existing {
+	margin-top: -20px;
+	margin-bottom: 0px;
+	text-align: center;
+	color: black;
+	background-color: #8e44ad;
+	height: 320px;
+	width: 100%; 
+	-webkit-box-shadow: inset 2px -14px 39px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 2px -14px 39px 0px rgba(0,0,0,0.75);
+	box-shadow: inset 2px -14px 39px 0px rgba(0,0,0,0.75);
+}
+				
+.register {
+	text-align: center;
+	color: black;
+	background-color: #3498db;
+	height: 320px;
+	width: 100%; 
+	margin-top: -20px;
+	-webkit-box-shadow: inset 2px 15px 39px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 2px 15px 39px 0px rgba(0,0,0,0.75);
+	box-shadow: inset 2px 15px 39px 0px rgba(0,0,0,0.75);
+}
+
+.input-spacing {
+/*margin-top: 50px;*/
+}
+
+/*________Initial sign in page________*/
+
+.tagline {
+	height: 100px;
+}
+
+.header{
+	text-align: center;
+	height: 70px;
+}
+
+.box-one {
+	text-align: center;
+}
+
+.section-one{
+	/*color: white;*/
+
+	/*background-color: red;*/
+	text-align: center;
+
+}
+
+.section-two{
+	background-color: blue;
+	text-align: center;
+	height: 70px;
+	padding-top: 20px;
+
+}
+
+.section-three{
+	background-color: blue;
+	text-align: center;
+
+}
+
+.section-four{
+	background-color: blue;
+	text-align: center;
+
+}
+
+.logout-button {
+	text-align: center;
+	width: 70px;
+	height: 70px;
+	color: white;
+	background-color: #34495e;
+	display: inline-block;
+	float: right;
+	margin-right: 3px;
+	margin-top: -15px;
+}
+
+.link-portfolio {
+	text-align: center;
+	width: 70px;
+	height: 70px;
+	color: white;
+	background-color: #34495e;
+	display: inline-block;
+	float: right;
+	margin-right: 3px;
+	margin-top: -15px;
+}
+
+a:link {
+	color: inherit;
+}
+
+.navigate {
+	display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
