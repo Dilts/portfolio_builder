@@ -53,6 +53,10 @@ var indexController = {
 	},
 
 	addToProfile: function(req, res) {
+		
+		// Clear array to prevent duplicates loading
+		// req.user.portfolio = []
+
 		// Images of work
 		req.user.portfolio.push({
 			image: req.files.image.name,
@@ -63,7 +67,7 @@ var indexController = {
 		
 		// // Skills 
 
-		// req.user.skills.push({
+		// req.user.skills({
 		// 	dslr: req.body.dslr,
 		// 	lens: req.body.lens,
 		// 	lightbox: req.body.lightbox,
@@ -73,7 +77,7 @@ var indexController = {
 		console.log(req.user)
 		req.user.save(function(err, doc) {
 			if (err) {
-				console.log('error not saving', err)
+				console.log('error not saving pictures', err)
 				res.send(500, 'did not save')
 			}
 
@@ -102,7 +106,10 @@ var indexController = {
 
 	addThemeToProfile: function(req, res) {
 
-		console.log(req.body)
+		console.log('pushing new theme');
+
+		// Clear array to prevent duplicates loading
+		req.user.themes = []
 
 		req.user.themes.push({
 			fancy: req.body.fancy,
@@ -113,7 +120,27 @@ var indexController = {
 		req.user.save(function(err, doc) {
 			if (err) {
 				console.log('error not saving', err)
-				res.send(500, 'did not save bio info')
+				res.send(500, 'did not save theme info')
+			}
+
+		}) 
+
+		res.render('admin', req)
+	},
+
+	addSocialToProfile: function(req, res) {
+
+		
+		req.user.email2 = req.body.email2 
+		req.user.twitter = req.body.twitter 
+		req.user.facebook = req.body.facebook 
+		
+		
+		// console.log(req.user)
+		req.user.save(function(err, doc) {
+			if (err) {
+				console.log('error not saving', err)
+				res.send(500, 'did not save social info')
 			}
 
 		}) 

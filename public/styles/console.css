@@ -1,3 +1,7 @@
+body {
+	font-family: 'Lato', sans-serif;
+}
+
 .hidden {
 	visibility: hidden;
 }
@@ -5,27 +9,44 @@
 .content-images {
 	height: 300px;
 	width: 100%;
-	background-color: green;
+	background-color: rgba(142, 68, 173,1.0);
+	padding-top: 30px;
+	padding-left: 30px;
+	padding-right: 20px;
 }
 
 .content-skills{
 	height: 300px;
 	width: 100%;
-	background-color: red;
+	background-color: rgba(26, 188, 156,1.0);
+	padding-top: 20px;
+	padding-left: 50px;
 }
 
 .content-bio{
 	height: 300px;
 	width: 100%;
-	padding-top: 50px;
-	padding-left: 50px;
-	background-color: blue;
+	padding-top: 30px;
+	padding-left: 30px;
+	background-color: rgba(41, 128, 185,1.0);
 }
 
 .content-theme{
 	height: 300px;
 	width: 100%;
-	background-color: yellow;
+	padding-top: 50px;
+	padding-left: 50px;
+	background-color: rgba(243, 156, 18,1.0);
+
+
+}
+
+.content-social {
+	height: 300px;
+	width: 100%;
+	padding-top: 20px;
+	padding-left: 50px;
+	background-color: rgba(192, 57, 43,1.0);
 
 }
 
@@ -46,21 +67,20 @@
 	padding-top: 130px;
 }
 
-h1 {
+.login-header {
 	font-size: 300%;
 	display: inline-block;
 	vertical-align: middle;
 	margin-left: 30px;
 }
 
-p {
+.tagline {
 	display: inline-block;
 	vertical-align: middle;
 }
 
 .existing {
 	margin-top: -20px;
-	margin-bottom: 0px;
 	text-align: center;
 	color: black;
 	background-color: #8e44ad;
@@ -89,45 +109,46 @@ p {
 
 /*________Initial sign in page________*/
 
-.tagline {
-	height: 100px;
+.greeting {
+	font-family: 'Lato', sans-serif;
+	font-weight: bolder;
+	font-size: 350%;
 }
 
-.header{
+.build{
 	text-align: center;
 	height: 70px;
+	font-family: 'Lato', sans-serif;
+	font-size: 500%;
+	margin-top: 100px;
 }
 
 .box-one {
-	text-align: center;
+	height: 300px;
 }
 
 .section-one{
-	/*color: white;*/
-
-	/*background-color: red;*/
 	text-align: center;
-
 }
 
 .section-two{
 	background-color: blue;
 	text-align: center;
-	height: 70px;
-	padding-top: 20px;
-
+	height: 100px;
+	padding-top: 30px;
 }
 
-.section-three{
-	background-color: blue;
-	text-align: center;
-
+.directions2 {
+	margin-top: 40px;
 }
 
-.section-four{
-	background-color: blue;
-	text-align: center;
+input {
+	height: 40px;
+}
 
+.button {
+	margin-top: 20px;
+	clear: both;
 }
 
 .logout-button {
@@ -135,7 +156,7 @@ p {
 	width: 70px;
 	height: 70px;
 	color: white;
-	background-color: #34495e;
+	background-color: rgba(46, 204, 113,1.0);
 	display: inline-block;
 	float: right;
 	margin-right: 3px;
@@ -144,10 +165,11 @@ p {
 
 .link-portfolio {
 	text-align: center;
+	font-size: 110%;
 	width: 70px;
 	height: 70px;
 	color: white;
-	background-color: #34495e;
+	background-color: rgba(46, 204, 113,1.0);
 	display: inline-block;
 	float: right;
 	margin-right: 3px;
@@ -162,6 +184,19 @@ a:link {
 	display: inline-block;
 }
 
+/*________________Dashboard_________*/
+
+.title-dashboard {
+	color: white;
+	font-size: 80px;
+	background-color: blue;
+	height: 100px;
+	width: 500px;
+}
+
+.container-fluid {
+	margin-top: 50px;
+}
 
 .textarea-styled {
 	width: 600px;
@@ -185,9 +220,85 @@ a:link {
   -o-background-size: cover;
   background-size: cover;
 }
+
+/*__________Bottom Display*/
+
+.bottom-display {
+	/*position: fixed;*/
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(236, 240, 241,1.0);
+
 }
 
+.display-images {
+	/*height: 100px;*/
+	min-height: 200px;
+	width: 100%;
+	max-width: 20%;
+	display: inline-block;
+	border-width: 3px;
+	border-style: solid;
+	border-color: rgba(142, 68, 173,1.0);
+}
+.display-skills {
+	/*height: 100px;*/
+	min-height: 200px;
+	width: 100%;
+	max-width: 19%;
+	margin-left: 1%;
+	display: inline-block;
+	border-width: 3px;
+	border-style: solid;
+	border-color: rgba(26, 188, 156,1.0);
+}
+.display-bio {
+	/*height: 100px;*/
+	min-height: 200px;
+	width: 100%;
+	max-width: 19%;
+	margin-left: 1%;
+	display: inline-block;
+	border-width: 3px;
+	border-style: solid;
+	border-color: rgba(41, 128, 185,1.0);
+	clear:both;
+}
+.display-theme {
+	/*height: 100px;*/
+	min-height: 200px;
+	width: 100%;
+	max-width: 19%;
+	margin-left: 1%;
+	display: inline-block;
+	border-width: 3px;
+	border-style: solid;
+	border-color: rgba(243, 156, 18,1.0);
+}
+.display-social {
+	/*height: 100px;*/
+	min-height: 200px;
+	width: 100%;
+	max-width: 19%;
+	margin-left: 1%;
+	display: inline-block;
+	border-width: 3px;
+	border-style: solid;
+	border-color: rgba(192, 57, 43,1.0);
+}
 
+.display-social img {
+	height: 70px;
+	width: 70px;
+}
 
+.add {
+	margin:2px;
+	height:50px;
+	width:130px;
+}
 
+label {
+	display: inline;
+}
 

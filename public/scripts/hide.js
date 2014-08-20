@@ -15,4 +15,8 @@ $(document).ready(function() {
 		$('.content').addClass('hidden');
 		$( ".content-theme" ).removeClass( "hidden" );
 	});
+	$(document).on('click', '.add-social', function(){
+		$('.content').addClass('hidden');
+		$( ".content-social" ).removeClass( "hidden" );
+	});
 });

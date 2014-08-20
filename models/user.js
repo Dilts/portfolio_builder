@@ -28,16 +28,19 @@ var userSchema = mongoose.Schema({
   job: String,
   hero: String,
   bio: String,
+  email2: String,
+  twitter: String,
+  facebook: String,
   portfolio: [{
     image: String,
     url: String
   }],
-  skills: [{
+  skills: {
     dslr: Boolean,
     lens: Boolean,
     lightbox: Boolean,
     film: Boolean
-  }],
+  },
   themes: [{
     fancy: String,
     pretty: String
