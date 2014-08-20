@@ -16,9 +16,7 @@ block content
 				input(type="text", name='name' placeholder="Enter your name")
 				input(type="text", name='job' placeholder='What is your job/hobby?')
 				input(type="textarea", name='byline' placeholder='What sets you apart?')
-		.section-three
-				h3 Upload your hero image. This is the first image the user will see when they come to your page. 
-		.section-four
+				h3 Upload your hero image. This is the first image the user will see when they come to your page.
 				input(type="file", name='hero' placeholder="Enter your hero image")
 				input(type='submit')
 
@@ -37,7 +35,7 @@ block content
 						button.add-skills Add Skills and Interests
 						button.add-bio Bio - your about me page
 						button.add-theme Select your theme
-
+						button.add-social Add Social Sharing
 				.col-md-8
 					.show-content
 						.content-images.hidden.content
@@ -48,9 +46,41 @@ block content
 								input(type="text", name='url' placeholder="Enter the URL of your website")
 								input(type='submit')
 						.content-skills.hidden.content
+							h3 List your experience with the following in the field of photography:
+							form(action='/portfolio-upload', method='post', enctype="multipart/form-data", role="form")
+								.checkbox
+									label(for="checkbox")
+										input(type="checkbox", name="dslr", value="dslr")
+										| DSLR Cameras
+								.checkbox
+									label(for="checkbox")
+										input(type="checkbox", name="lens", value="lens")
+										| Knowledge of how to use different lenses
+								.checkbox
+									label(for="checkbox")
+										input(type="checkbox", name="lightbox", value="lightbox")
+										| Comfortable using Adobe's Lightbox
+								.checkbox
+									label(for="checkbox")
+										input(type="checkbox", name="film", value="film")
+										| Knowledge of how to develop film
+										input(type='submit')
 						.content-bio.hidden.content
+							form(action="/portfolio-upload-bio", method="post", enctype="multipart/form-data", role="form")
+								input.textarea-styled(type="textarea", name='bio' placeholder="Tell the world about what you do...")
+								input(type='submit')
 						.content-theme.hidden.content
-		
+							h3 Choose a theme for your website
+							form(action='/portfolio-upload-theme', method='post', enctype="multipart/form-data", role="form")
+								.radio
+									label(for="radio")
+										input(type="radio", name="fancy", value="fancy")
+										| Fancy
+								.radio
+									label(for="radio")
+										input(type="radio", name="pretty", value="pretty")
+										| Pretty
+										input(type='submit')
 
 
 block scripts

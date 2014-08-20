@@ -3,25 +3,27 @@
 }
 
 .content-images {
-	height: 150px;
+	height: 300px;
 	width: 100%;
 	background-color: green;
 }
 
 .content-skills{
-	height: 150px;
+	height: 300px;
 	width: 100%;
 	background-color: red;
 }
 
 .content-bio{
-	height: 150px;
+	height: 300px;
 	width: 100%;
+	padding-top: 50px;
+	padding-left: 50px;
 	background-color: blue;
 }
 
 .content-theme{
-	height: 150px;
+	height: 300px;
 	width: 100%;
 	background-color: yellow;
 
@@ -161,12 +163,29 @@ a:link {
 }
 
 
+.textarea-styled {
+	width: 600px;
+	height: 120px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+	background-image: url(bg.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
 
 
 
 
-
-
+.background-image {
+	background-repeat: no-repeat;
+  background: no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+}
 
 
 

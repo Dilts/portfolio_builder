@@ -57,15 +57,63 @@ var indexController = {
 		req.user.portfolio.push({
 			image: req.files.image.name,
 			url: req.body.url
-		}) 
-		 
-		// Skills 
+		})
+		
+		// req.user.bio = req.body.bio 
+		
+		// // Skills 
 
+		// req.user.skills.push({
+		// 	dslr: req.body.dslr,
+		// 	lens: req.body.lens,
+		// 	lightbox: req.body.lightbox,
+		// 	film: req.body.film
+		// })
+		
 		console.log(req.user)
 		req.user.save(function(err, doc) {
 			if (err) {
 				console.log('error not saving', err)
 				res.send(500, 'did not save')
+			}
+
+		}) 
+
+		res.render('admin', req)
+	},
+
+	addBioToProfile: function(req, res) {
+
+		
+		req.user.bio = req.body.bio 
+		
+		
+		// console.log(req.user)
+		req.user.save(function(err, doc) {
+			if (err) {
+				console.log('error not saving', err)
+				res.send(500, 'did not save bio info')
+			}
+
+		}) 
+
+		res.render('admin', req)
+	},
+
+	addThemeToProfile: function(req, res) {
+
+		console.log(req.body)
+
+		req.user.themes.push({
+			fancy: req.body.fancy,
+			pretty: req.body.pretty
+		})		
+		
+		// console.log(req.user)
+		req.user.save(function(err, doc) {
+			if (err) {
+				console.log('error not saving', err)
+				res.send(500, 'did not save bio info')
 			}
 
 		}) 

@@ -110,6 +110,10 @@ app.post('/file-upload', indexController.createProfile);
 
 app.post('/portfolio-upload', indexController.addToProfile);
 
+app.post('/portfolio-upload-bio', indexController.addBioToProfile);
+
+app.post('/portfolio-upload-theme', indexController.addThemeToProfile);
+
 
 var server = app.listen(6720, function() {
 	console.log('Express server listening on port ' + server.address().port);

@@ -1,12 +1,27 @@
 extends layout
 
 block content
-	body(style="background-image: url('/uploads/#{user.hero}');")
-		h1 The personal portfolio of #{user.username}
-			.pictures
-				ul
-					for pic in user.portfolio
-						li
-							a(href="#{pic.url}")
-							image(src="/uploads/#{pic.image}")
+	if user.themes[0].fancy === 'fancy'
+		body(class="background-image" style="background-image: url('/uploads/#{user.hero}');")
+			h1 The personal portfolio of #{user.username}
+				.pictures
+					ul
+						for pic in user.portfolio
+							li
+								a(href="#{pic.url}")
+								image(src="/uploads/#{pic.image}")
+							li
+								a(href="#{pic.url}")
+								image(src="/uploads/#{pic.image}")
+							li
+								a(href="#{pic.url}")
+								image(src="/uploads/#{pic.image}")
+							li
+								a(href="#{pic.url}")
+								image(src="/uploads/#{pic.image}")
+				.bio-content-stuff
+					p #{user.bio}
+
+	else
+		h1 Pretty
 block scripts
