@@ -41,6 +41,10 @@ body {
 
 }
 
+.drop{
+	margin-top: 50px;
+}
+
 .content-social {
 	height: 300px;
 	width: 100%;
@@ -233,13 +237,15 @@ a:link {
 	/*position: fixed;*/
     bottom: 0;
     width: 100%;
+    min-height: 100%;
     background-color: rgba(236, 240, 241,1.0);
-
+    /*margin-top: 75px;*/
+    padding-top: 70px;
 }
 
 .display-images {
 	/*height: 100px;*/
-	min-height: 200px;
+	min-height: 100%;
 	width: 100%;
 	max-width: 20%;
 	display: inline-block;
@@ -247,9 +253,10 @@ a:link {
 	border-style: solid;
 	border-color: rgba(142, 68, 173,1.0);
 }
+
 .display-skills {
 	/*height: 100px;*/
-	min-height: 200px;
+	min-height: 100%;
 	width: 100%;
 	max-width: 19%;
 	margin-left: 1%;
@@ -258,9 +265,10 @@ a:link {
 	border-style: solid;
 	border-color: rgba(26, 188, 156,1.0);
 }
+
 .display-bio {
 	/*height: 100px;*/
-	min-height: 200px;
+	min-height: 100%;
 	width: 100%;
 	max-width: 19%;
 	margin-left: 1%;
@@ -270,9 +278,10 @@ a:link {
 	border-color: rgba(41, 128, 185,1.0);
 	clear:both;
 }
+
 .display-theme {
 	/*height: 100px;*/
-	min-height: 200px;
+	min-height: 100%;
 	width: 100%;
 	max-width: 19%;
 	margin-left: 1%;
@@ -281,9 +290,10 @@ a:link {
 	border-style: solid;
 	border-color: rgba(243, 156, 18,1.0);
 }
+
 .display-social {
 	/*height: 100px;*/
-	min-height: 200px;
+	min-height: 100%;
 	width: 100%;
 	max-width: 19%;
 	margin-left: 1%;
