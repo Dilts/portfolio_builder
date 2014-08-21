@@ -1,18 +1,37 @@
-extends layout
+extends template
 
 block content
 	if user.themes[0].fancy === 'fancy'
 		body(class="background-image" style="background-image: url('/uploads/#{user.hero}');")
-			h1 The personal portfolio of #{user.username}
-				.pictures
-					ul
-						for pic in user.portfolio
-							li
-								a(href="#{pic.url}")
-									image(src="/uploads/#{pic.image}")
-				.bio-content-stuff
-					p #{user.bio}
+			.contain
+				h1.window The personal portfolio of 
+					.social
+						if user.email2
+							a(href="mailto:#{user.email}?subject=You are a badass&body=I love your website! See your job offer below...")
+								image(src="/images/social_icon_email.png")
+						if user.twitter
+							a(href="http://#{user.twitter}")
+								image(src="/images/social_icon_twitter.png")
+						if user.facebook
+							a(href="http://#{user.facebook}")
+								image(src="/images/social_icon_github.png")
+
+				p.callout #{user.username}
+					.bio-contain
+						p.job photographer
+						p.bio #{user.bio}
+					.hero
+						.pictures
+							ul
+								for pic in user.portfolio
+									li
+										a(href="http://#{pic.url}")
+											image(src="/uploads/#{pic.image}")
+			
 
 	else
-		h1 Pretty
+		body
+			h1 Pretty
+
 block scripts
+link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>

@@ -4,7 +4,7 @@ block content
 	.container-fluid
 		.row
 			.col-md-12
-				p.logout-button: a(href="/auth/logout") Log out
+				p.logout-button: a(href="/auth/logout") Log out<br>of<br>account
 				p.link-portfolio: a(href="/test/#{user.id}") View Portfolio page
 				if !user.job
 					.box-one
@@ -99,9 +99,9 @@ block content
 													input.form-control(type="text", name='twitter' placeholder='Enter Twitter Handle')
 													|Twitter
 											.form-group
-												label(for="facebook")
-													input.form-control(type="textarea", name='twitter' placeholder='Link to Facebook page')
-													|Facebook
+												label(for="github")
+													input.form-control(type="textarea", name='facebook' placeholder='Link to Github page')
+													|Github
 												<br>
 												input.button(type='submit')
 					.bottom-display
@@ -148,14 +148,14 @@ block content
 									image(src="/images/social_icon_email.png")
 								else
 									li No email being shared
-								if user.email2
+								if user.twitter
 									image(src="/images/social_icon_twitter.png")
 								else
 									li No Twitter Handle being shared
-								if user.email2
+								if user.facebook
 									image(src="/images/social_icon_github.png")
 								else
-									li No Facebook Account being shared
+									li No Github Account being shared
 
 block scripts
 	script(src='/scripts/hide.js')

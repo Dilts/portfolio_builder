@@ -1,0 +1,60 @@
+.contain {
+	font-family: 'Josefin Slab', serif;
+}
+
+.bio-contain {
+	background-color: white;
+	width: 100%;
+	min-height: 300px; 
+	margin-bottom: 5%;
+}
+
+.bio {
+	width: 60%;
+	margin-top: 8%;
+	float: right;
+	clear: right;
+}
+
+.job {
+	width: 40%;
+	float: left;
+	clear: left;
+	text-align: right;
+	font-size: 200%;
+}
+
+
+.window {
+	height: 130px;
+	width: 100%;
+}
+
+.callout {
+	color: white;
+	height: 145px;
+	font-size: 1080%;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.pictures img {
+	padding:4px;
+	border:10px solid white;
+	margin: 1%;
+}
+
+.social {
+	margin-top: -5%;
+}
+
+.social img {
+	height: 15%;
+	width: 15%;
+	display: block;
+	clear: right;
+	float: right;
+	margin-top: 10px;
+	margin-bottom: -7%;
+	margin-right: -5%;
+}
